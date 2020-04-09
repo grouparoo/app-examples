@@ -44,12 +44,11 @@ services:
     depends_on:
       - db
       - redis
+      - grouparoo-web
     networks:
       - grouparoo_frontend
       - grouparoo_backend
 
 networks:
   grouparoo_frontend:
-    driver: overlay
   grouparoo_backend:
-    driver: overlay
