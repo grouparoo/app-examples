@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grouparoo-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grouparoo-web
+  template:
+    metadata:
+      labels:
+        app: grouparoo-web
+    spec:
+      containers:
+        - name: grouparoo-web
+          image: grouparoo/app-example:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: WEB_SERVER
+              value: "true"
+            - name: WORKERS
+              value: "0"
+            - name: SCHEDULER
+              value: "false"
+            - name: REDIS_URL
+              value: "redis://grouparoo-redis.xxx.ng.0001.use1.cache.amazonaws.com:6379/0"
+            - name: DATABASE_URL
+              value: "postgresql://postgres:password@grouparoo.cluster-xxx.us-east-1.rds.amazonaws.com:5432/grouparoo"
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grouparoo-web
+spec:
+  selector:
+    app: grouparoo-web
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
