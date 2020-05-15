@@ -39,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "npm-check-updates": "^5.0.0"
+    "npm-check-updates": "^6.0.0"
   }
 }
