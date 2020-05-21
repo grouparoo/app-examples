@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd "`dirname "$0"`/.."
+
+printf "*** starting server ***\r\n"
+npm run start &
+
+sleep 10
+
+printf "*** checking status ***\r\n"
+curl http://localhost:3000/api/v1/status | jq
+
+printf "It worked!\r\n"
+pkill -f dist/server
+wait
+
+printf "Done!\r\n"
