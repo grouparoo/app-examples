@@ -10,7 +10,7 @@ npm run start &
 sleep 10
 
 printf "*** checking status ***\r\n"
-curl http://localhost:3000/api/v1/status | jq
+curl http://localhost:3000/api/v1/status
 
 printf "It worked!\r\n"
 pkill -f dist/server
