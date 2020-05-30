@@ -12,4 +12,4 @@ An example Grouparoo deployment. This project includes:
 Learn more at https://github.com/grouparoo/grouparoo/blob/master/documents/deployment
 
 I am built automatically to https://hub.docker.com/r/grouparoo/app-example yielding the `grouparoo/app-example` docker image.
-I am tested automatically via Github Actions
+I am tested automatically via Github Actions against multiple versions of node.js.
