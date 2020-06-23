@@ -2,7 +2,7 @@
   "name": "Grouparoo",
   "description": "The Grouparoo Monorepo - Open Source Marketing Infrastructure",
   "repository": "https://github.com/grouparoo/grouparoo",
-  "logo": "https://raw.githubusercontent.com/grouparoo/grouparoo/master/public/logo/grouparoo.png",
+  "logo": "https://raw.githubusercontent.com/grouparoo/grouparoo/master/core/web/public/images/logo/logo.svg",
   "keywords": [
     "marketing",
     "marketing-automation",
