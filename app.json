@@ -1,0 +1,21 @@
+{
+  "name": "Grouparoo",
+  "description": "The Grouparoo Monorepo - Open Source Marketing Infrastructure",
+  "repository": "https://github.com/grouparoo/grouparoo",
+  "logo": "https://raw.githubusercontent.com/grouparoo/grouparoo/master/public/logo/grouparoo.png",
+  "keywords": [
+    "marketing",
+    "marketing-automation",
+    "marketing-tools",
+    "marketing-analytics",
+    "nodejs",
+    "typescript",
+    "big-data",
+    "events",
+    "actionhero",
+    "email",
+    "push-notifications",
+    "communication"
+  ],
+  "addons": [{ "plan": "heroku-redis" }, { "plan": "heroku-redis" }]
+}

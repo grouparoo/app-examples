@@ -14,6 +14,10 @@ Learn more at https://github.com/grouparoo/grouparoo/blob/master/documents/deplo
 I am built automatically to https://hub.docker.com/r/grouparoo/app-example yielding the `grouparoo/app-example` docker image.
 I am tested automatically via Github Actions against multiple versions of node.js.
 
+### Deploy to Heroku
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/grouparoo/app-example)
+
 ### To run me locally:
 
 1. Clone this repo (`git clone https://github.com/grouparoo/app-example.git`)
