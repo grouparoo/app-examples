@@ -2,7 +2,9 @@
   "name": "Grouparoo",
   "description": "The Grouparoo Monorepo - Open Source Marketing Infrastructure",
   "repository": "https://github.com/grouparoo/grouparoo",
+  "website": "https://www.grouparoo.com",
   "logo": "https://raw.githubusercontent.com/grouparoo/grouparoo/master/core/web/public/images/logo/logo.svg",
+  "success_url": "/",
   "keywords": [
     "marketing",
     "marketing-automation",
@@ -17,5 +19,16 @@
     "push-notifications",
     "communication"
   ],
-  "addons": [{ "plan": "heroku-redis" }, { "plan": "heroku-postgresql" }]
+  "addons": [{ "plan": "heroku-redis" }, { "plan": "heroku-postgresql" }],
+  "env": {
+    "WEB_URL": {
+      "description": "The URL of this application",
+      "required": false
+    },
+    "SERVER_TOKEN": {
+      "description": "A random key to identify this cluster",
+      "generator": "secret",
+      "required": true
+    }
+  }
 }
