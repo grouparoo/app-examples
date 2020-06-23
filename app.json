@@ -17,5 +17,5 @@
     "push-notifications",
     "communication"
   ],
-  "addons": [{ "plan": "heroku-redis" }, { "plan": "heroku-redis" }]
+  "addons": [{ "plan": "heroku-redis" }, { "plan": "heroku-postgres" }]
 }
