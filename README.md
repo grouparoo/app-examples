@@ -18,6 +18,16 @@ I am tested automatically via Github Actions against multiple versions of node.j
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/grouparoo/app-example)
 
+### Run locally with Docker
+
+Assuming you have Docker installed:
+
+```bash
+# in a new directory
+curl https://raw.githubusercontent.com/grouparoo/app-example/master/docker-compose.published.yml --output docker-compose.yml
+docker-compose up
+```
+
 ### To run me locally:
 
 1. Clone this repo (`git clone https://github.com/grouparoo/app-example.git`)

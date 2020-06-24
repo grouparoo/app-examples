@@ -16,7 +16,7 @@ services:
       - grouparoo_backend
 
   grouparoo-web:
-    build: ./
+    image: grouparoo/app-example
     ports:
       - 3000:3000
     environment:
@@ -35,7 +35,7 @@ services:
       - grouparoo_backend
 
   grouparoo-worker:
-    build: ./
+    image: grouparoo/app-example
     environment:
       REDIS_URL: redis://redis:6379/0
       DATABASE_URL: postgresql://postgres:password@db:5432/grouparoo_docker
