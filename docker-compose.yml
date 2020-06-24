@@ -17,6 +17,7 @@ services:
 
   grouparoo-web:
     build: ./
+    restart: always
     ports:
       - 3000:3000
     environment:
@@ -36,6 +37,7 @@ services:
 
   grouparoo-worker:
     build: ./
+    restart: always
     environment:
       REDIS_URL: redis://redis:6379/0
       DATABASE_URL: postgresql://postgres:password@db:5432/grouparoo_docker
