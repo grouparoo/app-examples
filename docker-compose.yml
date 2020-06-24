@@ -26,6 +26,7 @@ services:
       WEB_SERVER: "true"
       SCHEDULER: "false"
       WORKERS: 0
+      SERVER_TOKEN: "default-server-token"
     depends_on:
       - db
       - redis
@@ -41,6 +42,7 @@ services:
       WEB_SERVER: "false"
       SCHEDULER: "true"
       WORKERS: 10
+      SERVER_TOKEN: "default-server-token"
     depends_on:
       - db
       - redis
