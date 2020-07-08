@@ -15,7 +15,9 @@
     "@grouparoo/google-sheets": "latest",
     "@grouparoo/logger": "latest",
     "@grouparoo/mailchimp": "latest",
+    "@grouparoo/hubspot": "latest",
     "@grouparoo/mysql": "latest",
+    "@grouparoo/bigquery": "latest",
     "@grouparoo/postgres": "latest"
   },
   "scripts": {
@@ -26,13 +28,15 @@
   },
   "grouparoo": {
     "plugins": [
-      "@grouparoo/mysql",
-      "@grouparoo/postgres",
-      "@grouparoo/mailchimp",
-      "@grouparoo/logger",
       "@grouparoo/csv",
       "@grouparoo/email-authentication",
-      "@grouparoo/google-sheets"
+      "@grouparoo/google-sheets",
+      "@grouparoo/logger",
+      "@grouparoo/mailchimp",
+      "@grouparoo/hubspot",
+      "@grouparoo/mysql",
+      "@grouparoo/bigquery",
+      "@grouparoo/postgres"
     ],
     "includedFiles": [
       "assets"
