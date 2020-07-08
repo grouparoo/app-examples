@@ -16,6 +16,7 @@
     "@grouparoo/logger": "latest",
     "@grouparoo/mailchimp": "latest",
     "@grouparoo/hubspot": "latest",
+    "@grouparoo/sailthru": "latest",
     "@grouparoo/mysql": "latest",
     "@grouparoo/bigquery": "latest",
     "@grouparoo/postgres": "latest"
@@ -34,6 +35,7 @@
       "@grouparoo/logger",
       "@grouparoo/mailchimp",
       "@grouparoo/hubspot",
+      "@grouparoo/sailthru",
       "@grouparoo/mysql",
       "@grouparoo/bigquery",
       "@grouparoo/postgres"
