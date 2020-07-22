@@ -3,9 +3,8 @@ name: Node.js CI
 on:
   push:
     branches: [master]
-# Since all the dependinces of this project are already released to NPM, we /have/ to assume they already are working... 
-#   pull_request:
-#     branches: [master]
+  pull_request:
+    branches: [master]
   schedule:
     - cron: "0 0 * * 3"
 
