@@ -43,8 +43,5 @@
     "includedFiles": [
       "assets"
     ]
-  },
-  "devDependencies": {
-    "npm-check-updates": "^7.0.2"
   }
 }
