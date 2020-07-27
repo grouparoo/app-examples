@@ -52,3 +52,4 @@ jobs:
           WEB_SERVER: true
           SCHEDULER: true
           WORKERS: 1
+          GROUPAROO_TELEMETRY_ENABLED: false
