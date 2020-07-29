@@ -18,7 +18,7 @@ I am tested automatically via Github Actions against multiple versions of node.j
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/grouparoo/app-example)
 
-### Run locally with Docker
+### Run locally with Docker & Docker Compose
 
 Assuming you have Docker installed:
 
