@@ -9,7 +9,7 @@ I am an example Grouparoo deployment. This project includes:
 - An example `Dockerfile` for building a docker image from this project, along with a `docker-compose.yml` for linking Grouparoo to associated services (Redis and Postgres), and splitting work between web and worker nodes.
 - Example Kubernetes files to deploy this application to AWS EKS.
 
-Learn more at https://github.com/grouparoo/grouparoo/blob/master/documents/deployment/getting-started.md
+Learn more at https://www.grouparoo.com/docs/deployment
 
 I am built automatically to https://hub.docker.com/r/grouparoo/app-example yielding the `grouparoo/app-example` docker image.
 I am tested automatically via Github Actions against multiple versions of node.js.
