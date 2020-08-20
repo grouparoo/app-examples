@@ -10,16 +10,17 @@
   },
   "dependencies": {
     "@grouparoo/core": "latest",
+    "@grouparoo/bigquery": "latest",
     "@grouparoo/csv": "latest",
     "@grouparoo/email-authentication": "latest",
     "@grouparoo/google-sheets": "latest",
+    "@grouparoo/hubspot": "latest",
     "@grouparoo/logger": "latest",
     "@grouparoo/mailchimp": "latest",
-    "@grouparoo/hubspot": "latest",
-    "@grouparoo/sailthru": "latest",
     "@grouparoo/mysql": "latest",
-    "@grouparoo/bigquery": "latest",
-    "@grouparoo/postgres": "latest"
+    "@grouparoo/postgres": "latest",
+    "@grouparoo/sailthru": "latest",
+    "@grouparoo/zendesk": "latest"
   },
   "scripts": {
     "prepare": "cd node_modules/@grouparoo/core && npm run prepare",
@@ -29,16 +30,17 @@
   },
   "grouparoo": {
     "plugins": [
+      "@grouparoo/bigquery",
       "@grouparoo/csv",
       "@grouparoo/email-authentication",
       "@grouparoo/google-sheets",
+      "@grouparoo/hubspot",
       "@grouparoo/logger",
       "@grouparoo/mailchimp",
-      "@grouparoo/hubspot",
-      "@grouparoo/sailthru",
       "@grouparoo/mysql",
-      "@grouparoo/bigquery",
-      "@grouparoo/postgres"
+      "@grouparoo/postgres",
+      "@grouparoo/sailthru",
+      "@grouparoo/zendesk"
     ],
     "includedFiles": [
       "assets"
