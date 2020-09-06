@@ -10,10 +10,11 @@ npm run start &
 sleep 10
 
 printf "*** checking status ***\r\n"
-curl http://localhost:3000/api/v1/status
+curl http://localhost:3000/api/v1/status/public
+curl http://localhost:3000/api/v1/status/private
 
 printf "It worked!\r\n"
-pkill -f dist/server
+pkill -f dist/grouparoo
 wait
 
 printf "Done!\r\n"
