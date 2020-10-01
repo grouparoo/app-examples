@@ -12,6 +12,7 @@ spec:
       labels:
         app: grouparoo-web
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
         - name: grouparoo-web
           image: grouparoo/app-example:latest
