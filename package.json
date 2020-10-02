@@ -19,7 +19,7 @@
     "@grouparoo/mailchimp": "0.1.15",
     "@grouparoo/marketo": "0.1.15",
     "@grouparoo/mysql": "0.1.15",
-    "@grouparoo/postgres": "0.1.15",
+    "@grouparoo/postgres": "0.1.16",
     "@grouparoo/sailthru": "0.1.15",
     "@grouparoo/salesforce": "0.1.15",
     "@grouparoo/snowflake": "0.1.15",
