@@ -21,7 +21,7 @@
     "@grouparoo/mysql": "0.1.15",
     "@grouparoo/postgres": "0.1.15",
     "@grouparoo/sailthru": "0.1.15",
-    "@grouparoo/salesforce": "0.1.15",
+    "@grouparoo/salesforce": "0.1.16",
     "@grouparoo/snowflake": "0.1.15",
     "@grouparoo/zendesk": "0.1.15"
   },
