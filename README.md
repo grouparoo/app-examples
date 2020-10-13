@@ -37,3 +37,7 @@ docker-compose up
 5. `npm start`
 
 Grouparoo releases stable versions against the `latest` npm tag, but also releases weekly against the `next` npm tag. To try the newest versions of grouparoo (our "Beta" builds), change "latest" to "next" within the `package.json`, and then run `npm install` again. You can learn more about the [Grouparoo release process here](https://github.com/grouparoo/grouparoo/blob/master/documents/development/publishing.md).
+
+## Having Trouble?
+
+If you are having trouble, visit the list of [common issues](https://www.grouparoo.com/docs/deployment/common-issues) or open a [Github issue](https://www.grouparoo.com/support) to get support.
