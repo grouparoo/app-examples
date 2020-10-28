@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+      - run: cp .env.example .env
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u
       - run: npm install
