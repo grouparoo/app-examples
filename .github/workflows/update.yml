@@ -7,7 +7,7 @@ on:
     - cron: "5 5 * * *"
 
 jobs:
-  version-match:
+  update:
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'grouparoo/app-example' }}
 
