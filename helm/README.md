@@ -14,4 +14,9 @@ Ensure that you have both docker and Kubernetes running locally. If you are usin
 
 You can run the generated Helm Chart locally with the helm command - https://helm.sh/docs/intro/install/
 
-Assuming you have Docker and Kubernetes running locally: `cd helm && helm install grouparoo-app-example . --replace`
+Assuming you have Docker and Kubernetes running locally: `
+
+```bash
+cd helm
+helm install grouparoo-app-example . --replace
+```

@@ -21,8 +21,8 @@ spec:
         kompose.version: 1.22.0 (HEAD)
       creationTimestamp: null
       labels:
-        io.kompose.network/grouparoo_backend: "true"
-        io.kompose.network/grouparoo_frontend: "true"
+        io.kompose.network/grouparoo-backend.local: "true"
+        io.kompose.network/grouparoo-frontend.local: "true"
         io.kompose.service: grouparoo-web
     spec:
       containers:
