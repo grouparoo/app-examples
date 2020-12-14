@@ -4,7 +4,7 @@ services:
     image: redis
     restart: always
     networks:
-      - grouparoo_backend
+      - grouparoo_backend.local
 
   db:
     image: postgres
@@ -13,7 +13,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: grouparoo_docker
     networks:
-      - grouparoo_backend
+      - grouparoo_backend.local
 
   grouparoo-web:
     build: ./
@@ -32,8 +32,8 @@ services:
       - db
       - redis
     networks:
-      - grouparoo_frontend
-      - grouparoo_backend
+      - grouparoo_frontend.local
+      - grouparoo_backend.local
 
   grouparoo-worker:
     build: ./
@@ -50,9 +50,9 @@ services:
       - redis
       - grouparoo-web
     networks:
-      - grouparoo_frontend
-      - grouparoo_backend
+      - grouparoo_frontend.local
+      - grouparoo_backend.local
 
 networks:
-  grouparoo_frontend:
-  grouparoo_backend:
+  grouparoo_frontend.local:
+  grouparoo_backend.local:
