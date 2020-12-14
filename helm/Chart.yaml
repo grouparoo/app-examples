@@ -1,0 +1,11 @@
+name: grouparoo-app-example
+description: A Grouparoo example deployment
+version: 0.0.1
+apiVersion: v1
+keywords:
+  - helm
+  - grouparoo
+  - cdp
+  - customer
+sources:
+home:
