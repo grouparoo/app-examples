@@ -28,9 +28,9 @@ spec:
       containers:
         - env:
             - name: DATABASE_URL
-              value: postgresql://postgres:password@db:5432/grouparoo_docker
+              value: postgresql://postgres.grouparoo-web:password@db:5432/grouparoo_docker
             - name: REDIS_URL
-              value: redis://redis:6379/0
+              value: redis://redis.grouparoo-web:6379/0
             - name: SCHEDULER
               value: "true"
             - name: SERVER_TOKEN

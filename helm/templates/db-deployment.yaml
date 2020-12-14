@@ -24,6 +24,7 @@ spec:
         io.kompose.network/grouparoo-backend.local: "true"
         io.kompose.service: db
     spec:
+      hostname: db
       containers:
         - env:
             - name: POSTGRES_DB

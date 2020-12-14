@@ -24,6 +24,7 @@ spec:
         io.kompose.network/grouparoo-backend.local: "true"
         io.kompose.service: redis
     spec:
+      hostname: redis
       containers:
         - image: redis
           name: redis
