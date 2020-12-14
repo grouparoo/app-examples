@@ -29,3 +29,7 @@ And you can uninstall the chart with
 ```bash
 helm uninstall grouparoo-app-example
 ```
+
+## Notes
+
+If you have a 'stale' PVC (persistent value column) in your Kubernetes cluster, you may end up with an old value for the Postgres password. https://github.com/helm/charts/issues/10918#issuecomment-458044163. Totally blowing away all the data in your cluster is one way to fix it...

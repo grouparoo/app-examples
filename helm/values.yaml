@@ -81,3 +81,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Redis
+redis:
+  password: REDIS_PASSWORD
+
+# Postgres
+postgresql:
+  postgresqlDatabase: grouparoo_database
+  postgresqlUsername: grouparoo
+  postgresqlPassword: GROUPAROO_DB_PASSWORD
