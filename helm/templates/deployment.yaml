@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "grouparoo-example-app.fullname" . }}
+  name: {{ include "grouparoo-example-app.fullname" . }}-web
   labels:
     {{- include "grouparoo-example-app.labels" . | nindent 4 }}
 spec:
@@ -43,9 +43,9 @@ spec:
           - name: WEB_SERVER
             value: 'true'
           - name: SCHEDULER
-            value: 'true'
+            value: 'false'
           - name: WORKERS
-            value: '1'
+            value: '0'
           - name: SERVER_TOKEN
             value: default-server-token
           - name: DATABASE_URL
@@ -60,6 +60,75 @@ spec:
             httpGet:
               path: /
               port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "grouparoo-example-app.fullname" . }}-worker
+  labels:
+    {{- include "grouparoo-example-app.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "grouparoo-example-app.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "grouparoo-example-app.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "grouparoo-example-app.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          env:
+          - name: WEB_SERVER
+            value: 'false'
+          - name: SCHEDULER
+            value: 'true'
+          - name: WORKERS
+            value: '5'
+          - name: SERVER_TOKEN
+            value: default-server-token
+          - name: DATABASE_URL
+            value: postgresql://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ template "postgresql.fullname" . }}:5432/{{ .Values.postgresql.postgresqlDatabase }} # postgresql://postgres:password@db:5432/grouparoo_docker
+          - name: REDIS_URL
+            value: redis://redis:{{ .Values.redis.password }}@{{ template "redis.fullname" . }}-master:6379/0 # redis://redis:6379/0
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
