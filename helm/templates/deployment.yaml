@@ -49,9 +49,9 @@ spec:
           - name: SERVER_TOKEN
             value: default-server-token
           - name: DATABASE_URL
-            value: postgresql://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ template "postgresql.fullname" . }}:5432/{{ .Values.postgresql.postgresqlDatabase }} # postgresql://postgres:password@db:5432/grouparoo_docker
+            value: postgresql://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ template "postgresql.fullname" . }}:{{ .Values.postgresql.servicePort }}/{{ .Values.postgresql.postgresqlDatabase }} # postgresql://postgres:password@db:5432/grouparoo_docker
           - name: REDIS_URL
-            value: redis://redis:{{ .Values.redis.password }}@{{ template "redis.fullname" . }}-master:6379/0 # redis://redis:6379/0
+            value: redis://redis:{{ .Values.redis.password }}@{{ template "redis.fullname" . }}-master:{{ .Values.redis.redisPort }}/0 # redis://redis:6379/0
           livenessProbe:
             httpGet:
               path: /
@@ -126,9 +126,9 @@ spec:
           - name: SERVER_TOKEN
             value: default-server-token
           - name: DATABASE_URL
-            value: postgresql://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ template "postgresql.fullname" . }}:5432/{{ .Values.postgresql.postgresqlDatabase }} # postgresql://postgres:password@db:5432/grouparoo_docker
+            value: postgresql://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ template "postgresql.fullname" . }}:{{ .Values.postgresql.servicePort }}/{{ .Values.postgresql.postgresqlDatabase }} # postgresql://postgres:password@db:5432/grouparoo_docker
           - name: REDIS_URL
-            value: redis://redis:{{ .Values.redis.password }}@{{ template "redis.fullname" . }}-master:6379/0 # redis://redis:6379/0
+            value: redis://redis:{{ .Values.redis.password }}@{{ template "redis.fullname" . }}-master:{{ .Values.redis.redisPort }}/0 # redis://redis:6379/0
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
