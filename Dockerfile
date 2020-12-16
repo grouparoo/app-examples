@@ -21,6 +21,6 @@ RUN npm install
 RUN npm prune
 
 WORKDIR /grouparoo/node_modules/@grouparoo/core
-CMD ["./api/bin/start"]
+CMD ["./bin/start"]
 
 EXPOSE $PORT/tcp
