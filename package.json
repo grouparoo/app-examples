@@ -27,8 +27,6 @@
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
-    "dev": "cd node_modules/@grouparoo/core && ./bin/dev",
-    "actionhero": "cd node_modules/@grouparoo/core && ../../.bin/actionhero",
     "test": "./__tests__/integration"
   },
   "grouparoo": {
