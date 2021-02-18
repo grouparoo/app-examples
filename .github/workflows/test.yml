@@ -50,6 +50,5 @@ jobs:
           PORT: 3000
           WEB_URL: http://localhost:3000
           WEB_SERVER: true
-          SCHEDULER: true
           WORKERS: 1
           GROUPAROO_TELEMETRY_ENABLED: false
