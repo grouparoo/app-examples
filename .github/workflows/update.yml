@@ -19,7 +19,7 @@ jobs:
       - run: npm-check-updates -u
       - run: npm install
       - name: store-core-version
-        run: echo CORE_VERSION=`cat package.json | jq '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
+        run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
       - uses: stefanzweifel/git-auto-commit-action@v4.1.2
         with:
           commit_message: Updating Packages
