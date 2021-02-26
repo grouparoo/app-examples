@@ -11,7 +11,7 @@
   "dependencies": {
     "@grouparoo/bigquery": "0.2.2",
     "@grouparoo/core": "0.2.2",
-    "@grouparoo/csv": "0.2.2",
+    "@grouparoo/csv": "0.2.3",
     "@grouparoo/google-sheets": "0.2.2",
     "@grouparoo/hubspot": "0.2.2",
     "@grouparoo/logger": "0.2.2",
