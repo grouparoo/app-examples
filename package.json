@@ -22,7 +22,7 @@
     "@grouparoo/sailthru": "0.2.2",
     "@grouparoo/salesforce": "0.2.2",
     "@grouparoo/snowflake": "0.2.2",
-    "@grouparoo/ui-community": "0.2.2",
+    "@grouparoo/ui-community": "0.2.3",
     "@grouparoo/zendesk": "0.2.2"
   },
   "scripts": {
