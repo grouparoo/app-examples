@@ -27,4 +27,6 @@ jobs:
           commit_user_email: hello@grouparoo.com
           commit_author: Grouparoo Bot <hello@grouparoo.com>
           branch: ${{ github.head_ref }}
-          tagging_message: v${{ env.CORE_VERSION }}
+          # tagging_message: v${{ env.CORE_VERSION }}
+      - name: git tag # This shouldn't be necessary if the above could push & tag at once
+        run: if git rev-parse v${{ env.CORE_VERSION }} >/dev/null 2>&1; then echo 'tag exists'; else git tag v${{ env.CORE_VERSION }} && git push origin --tags; fi
