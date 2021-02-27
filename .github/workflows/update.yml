@@ -20,13 +20,13 @@ jobs:
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@fixes/145
         with:
           commit_message: Updating Packages
           commit_user_name: Grouparoo Bot
           commit_user_email: hello@grouparoo.com
           commit_author: Grouparoo Bot <hello@grouparoo.com>
           branch: ${{ github.head_ref }}
-          # tagging_message: v${{ env.CORE_VERSION }}
-      - name: git tag # This shouldn't be necessary if the above could push & tag at once
-        run: if git rev-parse v${{ env.CORE_VERSION }} >/dev/null 2>&1; then echo 'tag exists'; else git tag v${{ env.CORE_VERSION }} && git push origin --tags; fi
+          tagging_message: v${{ env.CORE_VERSION }}
+      # - name: git tag # This shouldn't be necessary if the above could push & tag at once
+      #   run: if git rev-parse v${{ env.CORE_VERSION }} >/dev/null 2>&1; then echo 'tag exists'; else git tag v${{ env.CORE_VERSION }} && git push origin --tags; fi
