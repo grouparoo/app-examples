@@ -15,9 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: cp .env.example .env
+      - run: npm install
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u
-      - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
       - uses: stefanzweifel/git-auto-commit-action@fixes/145
