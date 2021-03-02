@@ -2,7 +2,7 @@ name: update
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   schedule:
     - cron: "5 5 * * *"
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     if: ${{ github.repository == 'grouparoo/app-example' }}
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - run: cp .env.example .env
       - run: npm install
       - run: sudo npm install -g npm-check-updates
