@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
-      - uses: stefanzweifel/git-auto-commit-action@4.9.2
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updating Packages
           commit_user_name: Grouparoo Bot
