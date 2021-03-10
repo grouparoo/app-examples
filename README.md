@@ -14,15 +14,15 @@ An example application that is configured using Declarative Sync.
 
 ### [`grouparoo/app-example-heroku`](https://github.com/grouparoo/app-example-heroku)
 
-An example application ready to deploy Grouparoo to Heroku. This repository also includes the code for the Deploy to Heroku Button.
+An example application ready to deploy Grouparoo to Heroku. This repository also includes the code for the "Deploy to Heroku" Button.
 
 ### [`grouparoo/app-example-aws`](https://github.com/grouparoo/app-example-aws)
 
-An example application ready to deploy Grouparoo to AWS via Elastic Beanstalk & CodeDeploy.
+An example application ready to deploy Grouparoo to Amazon Web Services (AWS) via Elastic Beanstalk & CodeDeploy.
 
-### [`grouparoo/app-example-gce`](https://github.com/grouparoo/app-example-gce)
+### [`grouparoo/app-example-gce`](https://github.com/grouparoo/app-example-gcp)
 
-An example application ready to deploy Grouparoo to GCE via Google Cloud Run.
+An example application ready to deploy Grouparoo to Google Cloud Platform (GCP) via Google Cloud Run.
 
 ### [`grouparoo/app-example-docker`](https://github.com/grouparoo/app-example-docker)
 
