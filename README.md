@@ -22,7 +22,7 @@ An example application ready to deploy Grouparoo to AWS via Elastic Beanstalk & 
 
 ### [`grouparoo/app-example-gce`](https://github.com/grouparoo/app-example-gce)
 
-An example application ready to deploy Grouparoo to GCE via Google Cloud Run
+An example application ready to deploy Grouparoo to GCE via Google Cloud Run.
 
 ### [`grouparoo/app-example-docker`](https://github.com/grouparoo/app-example-docker)
 
