@@ -1,6 +1,6 @@
 # Grouparoo App Examples
 
-This Repository is a "menu" of the example Grouparoo Deployments available.
+This Repository is a menu of the example Grouparoo Deployments available.
 
 All the repositories linked here are automatically kept up-to-date with the latest releases of Grouparoo.
 
