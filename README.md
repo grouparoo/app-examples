@@ -6,15 +6,13 @@ All the repositories linked here are automatically kept up-to-date with the late
 
 ## Configuration Examples
 
-Examples configuring Grouparoo via [Declarative Sync](http://localhost:3001/docs/config).
+> Examples configuring Grouparoo via [Declarative Sync](http://localhost:3001/docs/config).
 
 ### [`grouparoo/app-example-config`](https://github.com/grouparoo/app-example-config)
 
-An example application that is configured using Declarative Sync.
-
 ## Deployment Platform Examples
 
-Before you deploy, it's important to understand [Grouparoo's deployment topology](https://www.grouparoo.com/docs/support/network), [environment variables](https://www.grouparoo.com/docs/support/environment), and [how to secure your Grouparoo cluster](https://www.grouparoo.com/docs/support/security).
+> Before you deploy, it's important to understand [Grouparoo's deployment topology](https://www.grouparoo.com/docs/support/network), [environment variables](https://www.grouparoo.com/docs/support/environment), and [how to secure your Grouparoo cluster](https://www.grouparoo.com/docs/support/security).
 
 ### [`grouparoo/app-example-heroku`](https://github.com/grouparoo/app-example-heroku)
 
