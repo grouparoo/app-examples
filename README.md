@@ -20,7 +20,7 @@ An example application ready to deploy Grouparoo to Heroku. This repository also
 
 An example application ready to deploy Grouparoo to Amazon Web Services (AWS) via Elastic Beanstalk & CodeDeploy.
 
-### [`grouparoo/app-example-gce`](https://github.com/grouparoo/app-example-gcp)
+### [`grouparoo/app-example-gcp`](https://github.com/grouparoo/app-example-gcp)
 
 An example application ready to deploy Grouparoo to Google Cloud Platform (GCP) via Google Cloud Run.
 
