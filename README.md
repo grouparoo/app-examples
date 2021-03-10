@@ -1,43 +1,29 @@
-# Grouparoo app-example
+# Grouparoo App Examples
 
-![Node.js CI](https://github.com/grouparoo/app-example/workflows/Node.js%20CI/badge.svg)
+This Repository is a "menu" of the example Grouparoo Deployments available.
 
-I am an example Grouparoo deployment. This project includes:
+All the repositories linked here are automatically kept up-to-date with the latest releases of Grouparoo.
 
-- An example `package.json` for using Grouparoo and a few common plugins.
-- An example `Procfile` for Heroku-like deployments.
-- An example `Dockerfile` for building a docker image from this project, along with a `docker-compose.yml` for linking Grouparoo to associated services (Redis and Postgres), and splitting work between web and worker nodes.
-- Example Kubernetes files to deploy this application to AWS EKS.
+## Configuration Examples
 
-Learn more at https://www.grouparoo.com/docs/deployment
+### [`grouparoo/app-example-config`](https://github.com/grouparoo/app-example-config)
 
-I am built automatically to https://hub.docker.com/r/grouparoo/app-example yielding the `grouparoo/app-example` docker image.
-I am tested automatically via Github Actions against multiple versions of node.js.
+An example application that is configured using Declarative Sync.
 
-### Deploy to Heroku
+## Deployment Platform Examples
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/grouparoo/app-example)
+### [`grouparoo/app-example-heroku`](https://github.com/grouparoo/app-example-heroku)
 
-### Run locally with Docker & Docker Compose
+An example application ready to deploy Grouparoo to Heroku. This repository also includes the code for the Deploy to Heroku Button.
 
-Assuming you have Docker installed:
+### [`grouparoo/app-example-aws`](https://github.com/grouparoo/app-example-aws)
 
-```bash
-# in a new directory
-curl -L https://www.grouparoo.com/docker-compose --output docker-compose.yml
-docker-compose up
-```
+An example application ready to deploy Grouparoo to AWS via Elastic Beanstalk & CodeDeploy.
 
-### To run me locally:
+### [`grouparoo/app-example-gce`](https://github.com/grouparoo/app-example-gce)
 
-1. Clone this repo (`git clone https://github.com/grouparoo/app-example.git`)
-2. Ensure that you have node.js (v12+), Redis, and Postgres installed locally
-3. `cp .env.example .env` and check that those values work for your local setup
-4. `npm install`
-5. `npm start`
+An example application ready to deploy Grouparoo to GCE via Google Cloud Run
 
-Grouparoo releases stable versions against the `latest` npm tag, but also releases weekly against the `next` npm tag. To try the newest versions of grouparoo (our "Beta" builds), change "latest" to "next" within the `package.json`, and then run `npm install` again. You can learn more about the [Grouparoo release process here](https://www.grouparoo.com/docs/development/publishing).
+### [`grouparoo/app-example-docker`](https://github.com/grouparoo/app-example-docker)
 
-## Having Trouble?
-
-If you are having trouble, visit the list of [common issues](https://www.grouparoo.com/docs/deployment/common-issues) or open a [Github issue](https://www.grouparoo.com/support) to get support.
+This repository shares how to build your own Docker images for Grouparoo, and how to deploy it with either Docker Compose or Kubernetes.
