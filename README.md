@@ -6,9 +6,23 @@ All the repositories linked here are automatically kept up-to-date with the late
 
 ## Configuration Examples
 
-> Examples configuring Grouparoo via [Declarative Sync](http://localhost:3001/docs/config).
+> Examples configuring Grouparoo via [Declarative Sync](https://www.grouparoo.com/docs/config).
 
 ### [`grouparoo/app-example-config`](https://github.com/grouparoo/app-example-config)
+
+Connects a database with `users` and `purchases` to create properties. Creates a few groups from that data related to high value users. Syncs data with Mailchimp.
+
+### [`grouparoo/app-example-csv`](https://github.com/grouparoo/app-example-csv)
+
+Connects to a remote CSV file to import Grouparoo profile data.
+
+## Integration Examples
+
+> Examples of using working with other platforms.
+
+### [`grouparoo/app-example-dbt`](https://github.com/grouparoo/app-example-dbt)
+
+Shows how to use Grouparoo within a [dbt](https://www.getdbt.com) project to sync data to destinations after using dbt to do the transformations.
 
 ## Deployment Platform Examples
 
