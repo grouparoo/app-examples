@@ -16,6 +16,10 @@ Connects a database with `users` and `purchases` to create properties. Creates a
 
 Connects to a remote CSV file to import Grouparoo profile data.
 
+### [`grouparoo/app-example-snowflake-salesforce`](https://github.com/grouparoo/app-example-snowflake-salesforce)
+
+Use Grouparoo to connect Snowflake to Salesforce.
+
 ## Integration Examples
 
 > Examples of using working with other platforms.
