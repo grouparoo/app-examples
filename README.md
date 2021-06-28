@@ -45,7 +45,3 @@ An example application ready to deploy Grouparoo to Google Cloud Platform (GCP) 
 ### [`grouparoo/app-example-docker`](https://github.com/grouparoo/app-example-docker)
 
 This repository shares how to build your own Docker images for Grouparoo, and how to deploy it with either Docker Compose or Kubernetes.
-
-### [`grouparoo/app-example-porter`](https://github.com/grouparoo/app-example-porter)
-
-This repository shares how to deploy the Grouparoo application to kubernetes via [porter](https://getporter.dev) using buildpacks.
