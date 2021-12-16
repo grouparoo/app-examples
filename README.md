@@ -30,6 +30,10 @@ Shows how to use Grouparoo within a [dbt](https://www.getdbt.com) project to syn
 
 > Before you deploy, it's important to understand [Grouparoo's deployment topology](https://www.grouparoo.com/docs/support/network), [environment variables](https://www.grouparoo.com/docs/support/environment), and [how to secure your Grouparoo cluster](https://www.grouparoo.com/docs/support/security).
 
+### [`grouparoo/app-example-cloud`](https://github.com/grouparoo/app-example-cloud)
+
+An example application deployed on Grouparoo Cloud, with configuration validation on pull requests and automatic deployment on merge to `main`.
+
 ### [`grouparoo/app-example-heroku`](https://github.com/grouparoo/app-example-heroku)
 
 An example application ready to deploy Grouparoo to Heroku. This repository also includes the code for the "Deploy to Heroku" Button.
